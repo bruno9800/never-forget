@@ -3,8 +3,22 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowRight } from "phosphor-react";
+import NeverForgetNav from "./NeverForgetNav";
+import LogoImg from "../../public/logo.svg";
+import Image from "next/image";
 
-export function MenuAside() {
+export interface TechProps {
+	id: string;
+	techName: string;
+	techImg: {
+		url: string;
+	}[];
+}
+
+export interface TechsQuery {
+	allTeches: TechProps[];
+}
+export function MenuAside({ allTeches }: TechsQuery) {
 	const [isOpenMenu, setIsOpenMenu] = useState(true);
 
 	function OpenMenuButton() {
@@ -28,21 +42,14 @@ export function MenuAside() {
               overflow-y-auto 
               overflow-x-hidden
               flex flex-col justify-start items-center
-              bg-gradient-to-tl from-red-800 to-slate-500 "
+              bg-gradient-side"
 			>
 				<Link href={"/"} className="mt-8">
-					Logo
+					<Image alt="logo Never Forget" src={LogoImg} width={60}></Image>
 				</Link>
 
 				<nav className="mt-16">
-					<ul className="flex flex-col justify-center items-center gap-2">
-						<li>
-							<Link href={"#"}>React</Link>
-						</li>
-						<li>
-							<Link href={"#"}>Typescript</Link>
-						</li>
-					</ul>
+					<NeverForgetNav allTeches={allTeches} />
 				</nav>
 			</div>
 
