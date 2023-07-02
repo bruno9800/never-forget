@@ -24,7 +24,7 @@ export default function NeverForgetNav({ allTeches }: NeverForgetProps) {
 					flex items-center justify-center
 				"
 				>
-					<Link href={`tech/${tech.techName}`} className="p-1 hover:p-[0.9px]">
+					<Link href={`/blog/${tech.techName}`} className="p-1 hover:p-[0.9px]">
 						<Image
 							src={tech.techImg[0].url}
 							alt={`logo ${tech.techName}`}

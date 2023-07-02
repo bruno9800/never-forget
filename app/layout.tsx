@@ -17,8 +17,11 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata = {
-	title: "Never Forget",
-	description: "%s | NF",
+	title: {
+		default: "Never Forget",
+		template: "%s | NF",
+	},
+	description: "Site desenvolvido por Bruno Matheus",
 };
 
 export default async function RootLayout({
@@ -26,16 +29,16 @@ export default async function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	//const { allTeches }: TechsQuery = await getAllTechs();
-	const { allTeches }: TechsQuery = {
-		allTeches: [],
-	};
+	const { allTeches }: TechsQuery = await getAllTechs();
+	// const { allTeches }: TechsQuery = {
+	// 	allTeches: [],
+	// };
 	return (
 		<html lang="en" className={`${fugaz_One.variable} ${ubuntu.variable}`}>
 			<body className={ubuntu.className}>
 				<div className="flex grid-cols-2">
 					<MenuAside allTeches={allTeches} />
-					<div className="flex-1 sm:ml-20 px-28 mt-12">{children}</div>
+					<div className="flex-1 sm:ml-20 px-28 mt-16">{children}</div>
 				</div>
 			</body>
 		</html>

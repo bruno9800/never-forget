@@ -6,7 +6,7 @@ export default async function Home() {
 	const [user] = await Promise.all([myGitHubProfile()]);
 
 	return (
-		<main className="mt-4">
+		<main>
 			<h1 className="text-5xl font-bold">
 				Bem vindo ao{" "}
 				<span className="bg-gradient-red-black px-2 rounded-lg">

@@ -9,3 +9,9 @@ export interface TechProps {
 export interface TechsQuery {
 	allTeches: TechProps[];
 }
+
+export interface TechByNameResponse {
+  tech: {
+		id: string;
+	}
+}
