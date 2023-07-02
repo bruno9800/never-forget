@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TechProps } from "./MenuAside";
+import { TechProps } from "../@types/queries";
 
 interface NeverForgetProps {
 	allTeches: TechProps[];

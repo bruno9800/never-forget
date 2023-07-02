@@ -6,18 +6,8 @@ import { ArrowRight } from "phosphor-react";
 import NeverForgetNav from "./NeverForgetNav";
 import LogoImg from "../../public/logo.svg";
 import Image from "next/image";
+import { TechsQuery } from "../@types/queries";
 
-export interface TechProps {
-	id: string;
-	techName: string;
-	techImg: {
-		url: string;
-	}[];
-}
-
-export interface TechsQuery {
-	allTeches: TechProps[];
-}
 export function MenuAside({ allTeches }: TechsQuery) {
 	const [isOpenMenu, setIsOpenMenu] = useState(true);
 

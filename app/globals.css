@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.backgroundBox {
+  min-width: 459px;
+  min-height: 205px;
+  background-image: url(../public/box-path.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,4 +27,9 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: var(--background-rgb);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fugaz);
+  text-transform: uppercase;
 }

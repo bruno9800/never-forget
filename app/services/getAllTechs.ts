@@ -2,7 +2,7 @@ import { performRequest } from "../lib/dato-cms";
 
 export default async function getAllTechs() {
   const response = await performRequest({query: `
-  query MyQuery {
+  query AllTechs {
     allTeches(filter: {_status: {eq: published}}) {
       id
       techName
