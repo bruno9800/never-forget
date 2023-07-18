@@ -9,7 +9,6 @@ const queryPageBySlugSchema = z.object({
 })
 
 export default async function getPageBySlug(slug: string) {
-  console.log('slug informado:' + slug)
   const response = await performRequest({query: `
   query PageBySlug {
     page(filter: {slug: {eq: "${slug}"}}) {
@@ -18,8 +17,6 @@ export default async function getPageBySlug(slug: string) {
     }
   }
   `})
-
-  console.log(response);
 
   const data = queryPageBySlugSchema.safeParse(response.data);
 

@@ -33,3 +33,24 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-fugaz);
   text-transform: uppercase;
 }
+
+.post-style {
+  @apply flex flex-col gap-4;
+
+}
+
+.post-style p {
+  text-indent: 2rem;
+  font-size: 1.25rem;
+  text-align: justify;
+}
+
+.post-style h1 {
+  @apply mt-4;
+  font-size: 4rem;
+}
+
+.post-style h2,h3,h4 {
+  @apply mt-4;
+  font-size: 1.5rem;
+}

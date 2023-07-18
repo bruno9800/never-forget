@@ -5,12 +5,12 @@ const getAllPostsByTechIdSchema = z.object({
   allPosts: z.array(z.object({
     id: z.string(),
     title: z.string(),
-    link: z.string().url().nullable(),
+    link: z.string().nullable(),
     publisher: z.string().nullable(),
     _createdAt: z.string(),
     contentPreview: z.string(),
     thumbnail: z.object({
-      url: z.string().url().nullable(),
+      url: z.string().url(),
     }),
     techs: z.array(z.object({
       techName: z.string(),

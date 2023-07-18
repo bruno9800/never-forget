@@ -7,7 +7,7 @@ export default function ThumbBlogList({
 	posts: AllPostsByTechIdType;
 }) {
 	return (
-		<div className="flex justify-start align-start gap-4 flex-wrap">
+		<div className="flex justify-start align-start gap-6 flex-wrap">
 			{allPosts.map((post) => (
 				<ThumbBlog {...post} />
 			))}

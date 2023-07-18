@@ -16,7 +16,7 @@ export default async function BlogTech({ params }: BlogTechParams) {
 	} = await getTechIdByTechName(tech);
 	const data = await getAllPostsByTechId(id);
 	return (
-		<main>
+		<main className="mt-6">
 			<ThumbBlogList posts={data} />
 		</main>
 	);

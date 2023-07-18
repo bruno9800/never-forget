@@ -19,7 +19,7 @@ interface PostProps {
 export function ThumbBlog(post: PostProps) {
 	return (
 		<Link
-			href={`${post.id}`}
+			href={`${post.techs[0].techName}/${post.id}`}
 			className="
     backgroundBox
     px-2 py-4
@@ -43,7 +43,7 @@ export function ThumbBlog(post: PostProps) {
 					>
 						{post.title}
 					</strong>
-					<p className="max-w-[17rem] max-h-[5.25rem]">
+					<p className="max-w-[17rem] max-h-[5.25rem] overflow-ellipsis line-clamp-3">
 						{post.contentPreview}...
 					</p>
 				</div>
