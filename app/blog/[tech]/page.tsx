@@ -7,6 +7,8 @@ interface BlogTechParams {
 	};
 }
 
+export const revalidate = 60 * 2; // 2 minutos;
+
 export default async function BlogTech({ params }: BlogTechParams) {
 	const { tech } = params;
 
