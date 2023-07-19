@@ -16,7 +16,7 @@ interface PostProps {
 	}[];
 }
 
-export function ThumbBlog(post: PostProps) {
+export async function ThumbBlog(post: PostProps) {
 	return (
 		<Link
 			href={`${post.techs[0].techName}/${post.id}`}
@@ -49,7 +49,7 @@ export function ThumbBlog(post: PostProps) {
 				</div>
 			</div>
 			<div className="w-full flex justify-between items-center px-8">
-				<Link href={post.link ?? ""}>{post.publisher}</Link>
+				<span>{post.publisher}</span>
 				<div className="flex justify-center items-center gap-1">
 					{post.techs.map((tech) => {
 						return (

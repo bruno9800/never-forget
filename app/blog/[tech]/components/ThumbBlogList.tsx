@@ -1,7 +1,7 @@
 import { AllPostsByTechIdType } from "../../../services/getAllPostsByTechId";
-import { ThumbBlog } from "./ThumbBlog.tsx/ThumbBlog";
+import { ThumbBlog } from "./ThumbBlog";
 
-export default function ThumbBlogList({
+export default async function ThumbBlogList({
 	posts: { allPosts },
 }: {
 	posts: AllPostsByTechIdType;

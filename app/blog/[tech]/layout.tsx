@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import getPageBySlug from "../../services/getPageBySlug";
 
 export const metadata = {
@@ -17,15 +18,14 @@ export default async function BlogLayout({
 	return (
 		<main>
 			{data?.page ? (
-				<>
+				<div>
 					<h1 className="text-5xl">{data.page.title}</h1>
 					{children}
-				</>
-			) : (
-				<div>
-					<strong>Página não encontrada</strong>
 				</div>
+			) : (
+				<strong>Página não encontrada</strong>
 			)}
+			<Footer />
 		</main>
 	);
 }

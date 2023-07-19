@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Fugaz_One, Ubuntu } from "next/font/google";
+import { Fugaz_One, Open_Sans } from "next/font/google";
 import { MenuAside } from "./components/MenuAside";
 import getAllTechs from "./services/getAllTechs";
 import { TechsQuery } from "./@types/queries";
@@ -10,7 +10,7 @@ const fugaz_One = Fugaz_One({
 	variable: "--font-fugaz",
 });
 
-const ubuntu = Ubuntu({
+const open_Sans = Open_Sans({
 	weight: ["300", "400", "700"],
 	subsets: ["latin"],
 	variable: "--font-ubuntu",
@@ -34,11 +34,13 @@ export default async function RootLayout({
 	// 	allTeches: [],
 	// };
 	return (
-		<html lang="en" className={`${fugaz_One.variable} ${ubuntu.variable}`}>
-			<body className={ubuntu.className}>
+		<html lang="en" className={`${fugaz_One.variable} ${open_Sans.variable}`}>
+			<body className={open_Sans.className}>
 				<div className="flex grid-cols-2">
 					<MenuAside allTeches={allTeches} />
-					<div className="flex-1 sm:ml-20 px-28 mt-16">{children}</div>
+					<div className="flex-1 sm:ml-20 px-28 pt-16 min-h-screen">
+						{children}
+					</div>
 				</div>
 			</body>
 		</html>
