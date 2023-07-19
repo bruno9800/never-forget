@@ -6,7 +6,7 @@ import Envelope from "../lib/icons/Envelope";
 export default async function Footer() {
 	return (
 		<footer
-			className="absolute bottom-0 bg-black w-full left-0
+			className=" bg-black w-full
 		"
 		>
 			<div className="flex items-center justify-between max-w-[1360px] mx-auto h-16">

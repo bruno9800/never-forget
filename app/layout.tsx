@@ -38,9 +38,7 @@ export default async function RootLayout({
 			<body className={open_Sans.className}>
 				<div className="flex grid-cols-2">
 					<MenuAside allTeches={allTeches} />
-					<div className="flex-1 sm:ml-20 px-28 pt-16 min-h-screen">
-						{children}
-					</div>
+					<div className="flex-1 sm:ml-20 min-h-screen">{children}</div>
 				</div>
 			</body>
 		</html>
